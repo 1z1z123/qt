@@ -8606,9 +8606,7 @@ debug/httpsynchronizer.o: ../../network/httpsynchronizer.cpp ../../network/https
 		E:/Qt2/6.5.3/mingw_64/include/QtCore/qjsonarray.h \
 		E:/Qt2/6.5.3/mingw_64/include/QtCore/QJsonObject \
 		E:/Qt2/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
-		E:/Qt2/6.5.3/mingw_64/include/QtCore/QDebug \
-		E:/Qt2/6.5.3/mingw_64/include/QtCore/QStringConverter \
-		E:/Qt2/6.5.3/mingw_64/include/QtCore/qstringconverter.h
+		E:/Qt2/6.5.3/mingw_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\httpsynchronizer.o ..\..\network\httpsynchronizer.cpp
 
 debug/tcpsyncserver.o: ../../network/tcpsyncserver.cpp ../../network/tcpsyncserver.h \
@@ -8861,9 +8859,7 @@ debug/reportgenerator.o: ../../threads/reportgenerator.cpp ../../threads/reportg
 		E:/Qt2/6.5.3/mingw_64/include/QtCore/QDate \
 		E:/Qt2/6.5.3/mingw_64/include/QtCore/qdatetime.h \
 		E:/Qt2/6.5.3/mingw_64/include/QtCore/qcalendar.h \
-		E:/Qt2/6.5.3/mingw_64/include/QtCore/qlocale.h \
-		E:/Qt2/6.5.3/mingw_64/include/QtCore/QStringConverter \
-		E:/Qt2/6.5.3/mingw_64/include/QtCore/qstringconverter.h
+		E:/Qt2/6.5.3/mingw_64/include/QtCore/qlocale.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\reportgenerator.o ..\..\threads\reportgenerator.cpp
 
 debug/statisticsthread.o: ../../threads/statisticsthread.cpp ../../threads/statisticsthread.h \

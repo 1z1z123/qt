@@ -5,7 +5,6 @@
 #include <QTextStream>
 #include <QDebug>
 #include <QDate>
-#include <QStringConverter>
 
 ReportGenerator::ReportGenerator(QObject *parent)
     : QObject(parent)
@@ -36,7 +35,7 @@ QString ReportGenerator::generateCSVReport(const QString &filePath)
     }
     
     QTextStream out(&file);
-    out.setEncoding(QStringConverter::Utf8);
+    // Qt 6 默认使用 UTF-8 编码
     
     QSqlDatabase db = DatabaseManager::instance().database();
     

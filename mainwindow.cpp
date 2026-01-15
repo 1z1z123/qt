@@ -71,7 +71,10 @@ void MainWindow::setupMenuBar()
                           "- 医生与科室管理\n"
                           "- 就诊记录与处方\n"
                           "- 药品与库存\n"
-                          "- 预约与排班");
+                          "- 预约与排班\n\n"
+                          "设计者：\n"
+                          "张志廣\n"
+                          "学号：2023414290438");
     });
 }
 
@@ -403,7 +406,6 @@ void MainWindow::onDeletePatient()
     int ret = QMessageBox::question(this, "确认", "确定要删除选中的病人吗？",
                                      QMessageBox::Yes | QMessageBox::No);
     if (ret == QMessageBox::Yes) {
-        int patientId = m_patientModel->data(m_patientModel->index(index.row(), 0)).toInt();
         if (m_patientModel->removeRow(index.row())) {
             m_patientModel->refresh();
             statusBar()->showMessage("删除成功", 2000);

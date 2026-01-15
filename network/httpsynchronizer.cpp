@@ -7,7 +7,6 @@
 #include <QJsonObject>
 #include <QSqlQuery>
 #include <QDebug>
-#include <QStringConverter>
 
 HttpSynchronizer::HttpSynchronizer(QObject *parent)
     : QObject(parent)
