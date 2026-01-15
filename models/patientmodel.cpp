@@ -21,7 +21,10 @@ PatientModel::PatientModel(QObject *parent)
     setHeaderData(8, Qt::Horizontal, "病史");
     setHeaderData(9, Qt::Horizontal, "过敏信息");
     
-    select();
+    setTable("patients");
+        // 设置编辑策略为：任何行改动立即写入数据库
+        setEditStrategy(QSqlTableModel::OnManualSubmit); // 或者 OnRowChange
+        select();
 }
 
 void PatientModel::refresh()

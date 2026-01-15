@@ -26,6 +26,7 @@
 #include <QDebug>
 #include <QAbstractItemView>
 #include <QDialog>
+#include <QSqlError>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -407,8 +408,14 @@ void MainWindow::onDeletePatient()
                                      QMessageBox::Yes | QMessageBox::No);
     if (ret == QMessageBox::Yes) {
         if (m_patientModel->removeRow(index.row())) {
-            m_patientModel->refresh();
-            statusBar()->showMessage("删除成功", 2000);
+            if (m_patientModel->submitAll()) {
+                m_patientModel->refresh();
+                statusBar()->showMessage("删除成功", 2000);
+            } else {
+                QMessageBox::critical(this, "错误", "删除失败：" + m_patientModel->lastError().text());
+                m_patientModel->revertAll();
+                m_patientModel->refresh();
+            }
         }
     }
 }
@@ -449,8 +456,14 @@ void MainWindow::onDeleteDoctor()
                                      QMessageBox::Yes | QMessageBox::No);
     if (ret == QMessageBox::Yes) {
         if (m_doctorModel->removeRow(index.row())) {
-            m_doctorModel->refresh();
-            statusBar()->showMessage("删除成功", 2000);
+            if (m_doctorModel->submitAll()) {
+                m_doctorModel->refresh();
+                statusBar()->showMessage("删除成功", 2000);
+            } else {
+                QMessageBox::critical(this, "错误", "删除失败：" + m_doctorModel->lastError().text());
+                m_doctorModel->revertAll();
+                m_doctorModel->refresh();
+            }
         }
     }
 }
@@ -491,8 +504,14 @@ void MainWindow::onDeleteDepartment()
                                      QMessageBox::Yes | QMessageBox::No);
     if (ret == QMessageBox::Yes) {
         if (m_departmentModel->removeRow(index.row())) {
-            m_departmentModel->refresh();
-            statusBar()->showMessage("删除成功", 2000);
+            if (m_departmentModel->submitAll()) {
+                m_departmentModel->refresh();
+                statusBar()->showMessage("删除成功", 2000);
+            } else {
+                QMessageBox::critical(this, "错误", "删除失败：" + m_departmentModel->lastError().text());
+                m_departmentModel->revertAll();
+                m_departmentModel->refresh();
+            }
         }
     }
 }
@@ -533,8 +552,14 @@ void MainWindow::onDeleteMedicalRecord()
                                      QMessageBox::Yes | QMessageBox::No);
     if (ret == QMessageBox::Yes) {
         if (m_medicalRecordModel->removeRow(index.row())) {
-            m_medicalRecordModel->refresh();
-            statusBar()->showMessage("删除成功", 2000);
+            if (m_medicalRecordModel->submitAll()) {
+                m_medicalRecordModel->refresh();
+                statusBar()->showMessage("删除成功", 2000);
+            } else {
+                QMessageBox::critical(this, "错误", "删除失败：" + m_medicalRecordModel->lastError().text());
+                m_medicalRecordModel->revertAll();
+                m_medicalRecordModel->refresh();
+            }
         }
     }
 }
@@ -575,8 +600,14 @@ void MainWindow::onDeletePrescription()
                                      QMessageBox::Yes | QMessageBox::No);
     if (ret == QMessageBox::Yes) {
         if (m_prescriptionModel->removeRow(index.row())) {
-            m_prescriptionModel->refresh();
-            statusBar()->showMessage("删除成功", 2000);
+            if (m_prescriptionModel->submitAll()) {
+                m_prescriptionModel->refresh();
+                statusBar()->showMessage("删除成功", 2000);
+            } else {
+                QMessageBox::critical(this, "错误", "删除失败：" + m_prescriptionModel->lastError().text());
+                m_prescriptionModel->revertAll();
+                m_prescriptionModel->refresh();
+            }
         }
     }
 }
@@ -617,8 +648,14 @@ void MainWindow::onDeleteMedicine()
                                      QMessageBox::Yes | QMessageBox::No);
     if (ret == QMessageBox::Yes) {
         if (m_medicineModel->removeRow(index.row())) {
-            m_medicineModel->refresh();
-            statusBar()->showMessage("删除成功", 2000);
+            if (m_medicineModel->submitAll()) {
+                m_medicineModel->refresh();
+                statusBar()->showMessage("删除成功", 2000);
+            } else {
+                QMessageBox::critical(this, "错误", "删除失败：" + m_medicineModel->lastError().text());
+                m_medicineModel->revertAll();
+                m_medicineModel->refresh();
+            }
         }
     }
 }
@@ -659,8 +696,14 @@ void MainWindow::onDeleteInventory()
                                      QMessageBox::Yes | QMessageBox::No);
     if (ret == QMessageBox::Yes) {
         if (m_inventoryModel->removeRow(index.row())) {
-            m_inventoryModel->refresh();
-            statusBar()->showMessage("删除成功", 2000);
+            if (m_inventoryModel->submitAll()) {
+                m_inventoryModel->refresh();
+                statusBar()->showMessage("删除成功", 2000);
+            } else {
+                QMessageBox::critical(this, "错误", "删除失败：" + m_inventoryModel->lastError().text());
+                m_inventoryModel->revertAll();
+                m_inventoryModel->refresh();
+            }
         }
     }
 }
@@ -701,8 +744,14 @@ void MainWindow::onDeleteAppointment()
                                      QMessageBox::Yes | QMessageBox::No);
     if (ret == QMessageBox::Yes) {
         if (m_appointmentModel->removeRow(index.row())) {
-            m_appointmentModel->refresh();
-            statusBar()->showMessage("删除成功", 2000);
+            if (m_appointmentModel->submitAll()) {
+                m_appointmentModel->refresh();
+                statusBar()->showMessage("删除成功", 2000);
+            } else {
+                QMessageBox::critical(this, "错误", "删除失败：" + m_appointmentModel->lastError().text());
+                m_appointmentModel->revertAll();
+                m_appointmentModel->refresh();
+            }
         }
     }
 }
@@ -743,8 +792,14 @@ void MainWindow::onDeleteSchedule()
                                      QMessageBox::Yes | QMessageBox::No);
     if (ret == QMessageBox::Yes) {
         if (m_scheduleModel->removeRow(index.row())) {
-            m_scheduleModel->refresh();
-            statusBar()->showMessage("删除成功", 2000);
+            if (m_scheduleModel->submitAll()) {
+                m_scheduleModel->refresh();
+                statusBar()->showMessage("删除成功", 2000);
+            } else {
+                QMessageBox::critical(this, "错误", "删除失败：" + m_scheduleModel->lastError().text());
+                m_scheduleModel->revertAll();
+                m_scheduleModel->refresh();
+            }
         }
     }
 }
