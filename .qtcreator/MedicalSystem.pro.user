@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+<<<<<<< HEAD
 <!-- Written by QtCreator 18.0.1, 2026-01-14T01:32:45. -->
+=======
+<!-- Written by QtCreator 18.0.1, 2026-01-14T17:24:27. -->
+>>>>>>> 2636b844d1cee2d1112a163099b32e8fd429a245
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -240,7 +244,11 @@
      <value type="QString" key="PerfRecordArgsId">-e cpu-cycles --call-graph &quot;dwarf,4096&quot; -F 250</value>
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:</value>
+<<<<<<< HEAD
      <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Administrator/Desktop/dzy/MedicalSystem.pro</value>
+=======
+     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">E:/dzy/MedicalSystem.pro</value>
+>>>>>>> 2636b844d1cee2d1112a163099b32e8fd429a245
      <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">false</value>
      <value type="QString" key="ProjectExplorer.RunConfiguration.UniqueId"></value>
      <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
@@ -278,7 +286,7 @@
     <value type="QString" key="PerfRecordArgsId">-e cpu-cycles --call-graph &quot;dwarf,4096&quot; -F 250</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Administrator/Desktop/dzy/MedicalSystem.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">E:/dzy/MedicalSystem.pro</value>
     <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">false</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.UniqueId"></value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
