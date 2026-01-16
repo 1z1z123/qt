@@ -2,8 +2,8 @@
 #include "ui_logindialog.h"
 #include <QKeyEvent>
 
-const QString LoginDialog::VALID_USERNAME = "zzg666";
-const QString LoginDialog::VALID_PASSWORD = "666";
+const QString LoginDialog::VALID_USERNAME = "张志廣";
+const QString LoginDialog::VALID_PASSWORD = "zzg666";
 
 LoginDialog::LoginDialog(QWidget *parent)
     : QDialog(parent), ui(new Ui::LoginDialog)
